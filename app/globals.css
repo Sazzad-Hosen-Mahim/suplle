@@ -10,6 +10,18 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  /* this color was added by Munna */
+  --color-green-50: #e7f7f6;
+  --color-green-100: #b5e4e3;
+  --color-green-200: #92d4d6;
+  --color-green-300: #60c5c3;
+  --color-green-400: #4fa5b7;
+  --color-green-500: #11a863;
+  --color-green-600: #009969;
+  --color-green-700: #0c7725;
+  --color-green-800: #056b59;
+  --color-green-900: #074745;
+  --color-gradient: linear-gradient(90deg, #56daab, #0f9996);
 }
 
 @media (prefers-color-scheme: dark) {
