@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import OwnerSiderBar from "../components/OwnerSiderBar";
+import sidebarlogo from "@/assets/siderbarlogo.png";
+import Image from "next/image";
 
 export default function AdminLayout({
   children,
@@ -49,12 +50,20 @@ export default function AdminLayout({
     <div className="bg-white min-h-screen">
       {/* Top Navigation */}
       <header className="fixed w-full z-30 flex bg-green-100 p-2 items-center justify-center h-16 px-10">
-        <div
+        {/* <div
           className={`logo ${
             !sidebarOpen ? "ml-12" : ""
           } dark:text-white transform ease-in-out duration-500 flex-none h-full flex items-center justify-center font-bold text-xl`}
         >
           NERVE
+        
+        </div> */}
+        <div
+          className={`logo ${
+            !sidebarOpen ? "ml-12" : ""
+          } dark:text-white transform ease-in-out duration-500 flex-none h-full flex items-center justify-center font-bold text-xl`}
+        >
+          <Image src={sidebarlogo} width={100} height={40} alt="Logo" />
         </div>
         {/* Spacer */}
         <div className="grow h-full flex items-center justify-center"></div>
@@ -79,13 +88,13 @@ export default function AdminLayout({
                 </svg>
               </div>
               <div className="w-8 h-8 flex">
-                <Image
-                  src=""
+                {/* <Image
+                  src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL3BsYXlcLzBiN2Y0ZTliLWY1OWMtNDAyNC05ZjA2LWIzZGMxMjg1MGFiNy0xOTIwLTEwODAuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4Mjh9fX0="
                   alt="profile"
                   width={32}
                   height={32}
                   className="shadow rounded-full object-cover"
-                />
+                /> */}
               </div>
             </div>
             <div className="hidden md:block text-sm md:text-md text-black dark:text-white">

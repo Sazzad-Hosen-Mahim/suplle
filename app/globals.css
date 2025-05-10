@@ -12,15 +12,15 @@
   --font-mono: var(--font-geist-mono);
   /* this color was added by Munna */
   --color-primary: #11a8a5;
-  --color-green-50: #e7f7f6;
+  --color-green-50: #e7f6f6;
   --color-green-100: #b5e4e3;
-  --color-green-200: #92d4d6;
+  --color-green-200: #92d7d6;
   --color-green-300: #60c5c3;
-  --color-green-400: #4fa5b7;
-  --color-green-500: #11a863;
-  --color-green-600: #009969;
-  --color-green-700: #0c7725;
-  --color-green-800: #056b59;
+  --color-green-400: #41b9b7;
+  --color-green-500: #11a8a5;
+  --color-green-600: #0f9996;
+  --color-green-700: #0c7775;
+  --color-green-800: #095c5b;
   --color-green-900: #074745;
   --color-gradient: linear-gradient(90deg, #56daab, #0f9996);
 }

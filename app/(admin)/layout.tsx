@@ -16,7 +16,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import Sidebar from "../components/Sidebar";
 
 export default function AdminLayout({
@@ -93,13 +92,13 @@ export default function AdminLayout({
                 </svg>
               </div>
               <div className="w-8 h-8 flex">
-                <Image
-                  src=""
+                {/* <Image
+                  src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL3BsYXlcLzBiN2Y0ZTliLWY1OWMtNDAyNC05ZjA2LWIzZGMxMjg1MGFiNy0xOTIwLTEwODAuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4Mjh9fX0="
                   alt="profile"
                   width={32}
                   height={32}
                   className="shadow rounded-full object-cover"
-                />
+                /> */}
               </div>
             </div>
             <div className="hidden md:block text-sm md:text-md text-black dark:text-white">
