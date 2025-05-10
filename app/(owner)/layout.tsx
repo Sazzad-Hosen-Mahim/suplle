@@ -1,22 +1,10 @@
-// import React from "react";
-// import Sidebar from "../components/Sidebar";
-
-// const AdminLayout = ({ children }: { children: React.ReactNode }) => {
-//   return (
-//     <div className="flex min-h-screen">
-//       <Sidebar />
-//       <main className="flex-1 p-4 bg-gray-50">{children}</main>
-//     </div>
-//   );
-// };
-
-// export default AdminLayout;
-
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Sidebar from "../components/Sidebar";
+import OwnerSiderBar from "../components/OwnerSiderBar";
+import sidebarlogo from "@/assets/siderbarlogo.png";
+import Image from "next/image";
 
 export default function AdminLayout({
   children,
@@ -62,12 +50,20 @@ export default function AdminLayout({
     <div className="bg-white min-h-screen">
       {/* Top Navigation */}
       <header className="fixed w-full z-30 flex bg-green-100 p-2 items-center justify-center h-16 px-10">
-        <div
+        {/* <div
           className={`logo ${
             !sidebarOpen ? "ml-12" : ""
           } dark:text-white transform ease-in-out duration-500 flex-none h-full flex items-center justify-center font-bold text-xl`}
         >
           NERVE
+        
+        </div> */}
+        <div
+          className={`logo ${
+            !sidebarOpen ? "ml-12" : ""
+          } dark:text-white transform ease-in-out duration-500 flex-none h-full flex items-center justify-center font-bold text-xl`}
+        >
+          <Image src={sidebarlogo} width={100} height={40} alt="Logo" />
         </div>
         {/* Spacer */}
         <div className="grow h-full flex items-center justify-center"></div>
@@ -109,7 +105,7 @@ export default function AdminLayout({
       </header>
 
       {/* Sidebar */}
-      <Sidebar
+      <OwnerSiderBar
         sidebarOpen={sidebarOpen}
         toggleDarkMode={toggleDarkMode}
         darkMode={darkMode}
