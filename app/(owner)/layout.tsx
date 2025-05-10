@@ -1,23 +1,9 @@
-// import React from "react";
-// import Sidebar from "../components/Sidebar";
-
-// const AdminLayout = ({ children }: { children: React.ReactNode }) => {
-//   return (
-//     <div className="flex min-h-screen">
-//       <Sidebar />
-//       <main className="flex-1 p-4 bg-gray-50">{children}</main>
-//     </div>
-//   );
-// };
-
-// export default AdminLayout;
-
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Sidebar from "../components/Sidebar";
+import OwnerSiderBar from "../components/OwnerSiderBar";
 
 export default function AdminLayout({
   children,
@@ -110,7 +96,7 @@ export default function AdminLayout({
       </header>
 
       {/* Sidebar */}
-      <Sidebar
+      <OwnerSiderBar
         sidebarOpen={sidebarOpen}
         toggleDarkMode={toggleDarkMode}
         darkMode={darkMode}

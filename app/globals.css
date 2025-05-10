@@ -11,6 +11,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   /* this color was added by Munna */
+  --color-primary: #11a8a5;
   --color-green-50: #e7f7f6;
   --color-green-100: #b5e4e3;
   --color-green-200: #92d4d6;

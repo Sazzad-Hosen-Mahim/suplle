@@ -8,7 +8,7 @@ interface SidebarProps {
   toggleSidebar: () => void;
 }
 
-const Sidebar = ({
+const OwnerSiderBar = ({
   sidebarOpen,
   toggleDarkMode,
   darkMode,
@@ -204,4 +204,4 @@ const Sidebar = ({
   );
 };
 
-export default Sidebar;
+export default OwnerSiderBar;
