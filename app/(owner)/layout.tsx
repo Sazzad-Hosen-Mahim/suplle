@@ -4,7 +4,10 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import OwnerSiderBar from "../components/OwnerSiderBar";
 import sidebarlogo from "@/assets/siderbarlogo.png";
+import personImg from "@/assets/person.jpg";
 import Image from "next/image";
+import MessageIcon from "@/components/icons/MessageIcon";
+import NotificationIcon from "@/components/icons/NotificationIcon";
 
 export default function AdminLayout({
   children,
@@ -49,24 +52,52 @@ export default function AdminLayout({
   return (
     <div className="bg-white min-h-screen">
       {/* Top Navigation */}
-      <header className="fixed w-full z-30 flex bg-green-100 p-2 items-center justify-center h-16 px-10">
-        {/* <div
-          className={`logo ${
-            !sidebarOpen ? "ml-12" : ""
-          } dark:text-white transform ease-in-out duration-500 flex-none h-full flex items-center justify-center font-bold text-xl`}
-        >
-          NERVE
-        
-        </div> */}
+      <header className="fixed w-full z-30 flex bg-green-100 p-2 items-center justify-between h-16 px-10">
         <div
           className={`logo ${
             !sidebarOpen ? "ml-12" : ""
-          } dark:text-white transform ease-in-out duration-500 flex-none h-full flex items-center justify-center font-bold text-xl`}
+          } dark:text-white transform ease-in-out duration-500 flex-none h-full flex items-center justify-center`}
         >
           <Image src={sidebarlogo} width={100} height={40} alt="Logo" />
         </div>
         {/* Spacer */}
-        <div className="grow h-full flex items-center justify-center"></div>
+        <div className="grow h-full flex items-center justify-center max-w-[200px]"></div>
+
+        {/* input field */}
+        <div className="flex w-full sm:w-[438px] h-[40px] px-[14px] py-[8px] items-center gap-[16px] sm:gap-[255px] flex-shrink-0 rounded-[8px] bg-[#F6F8FB] relative">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="w-full bg-transparent border-none outline-none text-gray-700"
+          />
+          <svg
+            className="absolute right-4 text-gray-500"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M23 21l-6-6m-5 2a7 7 0 1 0-7-7 7 7 0 0 0 7 7z"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
+
+        {/* icon for message and notification */}
+        <div className="flex justify-center items-center gap-4">
+          <div className="bg-green-200 size-8 flex justify-center items-center rounded-xl">
+            <MessageIcon size={20} color="#202020" />
+          </div>
+          <div className="bg-green-200 size-8 flex justify-center items-center rounded-xl">
+            <NotificationIcon size={20} color="#202020" />
+          </div>
+        </div>
+
         {/* User Profile */}
         <div className="flex-none h-full text-center flex items-center justify-center">
           <div className="flex space-x-3 items-center px-3">
@@ -88,13 +119,13 @@ export default function AdminLayout({
                 </svg>
               </div>
               <div className="w-8 h-8 flex">
-                {/* <Image
-                  src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL3BsYXlcLzBiN2Y0ZTliLWY1OWMtNDAyNC05ZjA2LWIzZGMxMjg1MGFiNy0xOTIwLTEwODAuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4Mjh9fX0="
+                <Image
+                  src={personImg}
                   alt="profile"
                   width={32}
                   height={32}
                   className="shadow rounded-full object-cover"
-                /> */}
+                />
               </div>
             </div>
             <div className="hidden md:block text-sm md:text-md text-black dark:text-white">
